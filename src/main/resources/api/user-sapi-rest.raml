@@ -1,0 +1,28 @@
+#%RAML 1.0
+title: user-sapi-rest
+
+
+/v1:
+  /customer/{customerID}:
+    uriParameters:
+      customerID:
+        required: true
+        type: number
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              example: {
+    "data": {
+        "id": 2,
+        "email": "janet.weaver@reqres.in",
+        "first_name": "Janet",
+        "last_name": "Weaver",
+        "avatar": ""
+    },
+    "support": {
+        "url": "",
+        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+    }
+}
